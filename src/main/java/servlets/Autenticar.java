@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beans.Ficha;
+
 /**
  * Servlet implementation class Autenticar
  */
@@ -22,7 +24,9 @@ public class Autenticar extends HttpServlet {
 		RequestDispatcher rd;
 		
 		if(user.equals("admin") && pwd.equals("admin")) {
-			rd = request.getRequestDispatcher("form.html");
+			Ficha fichaUsuario = new Ficha(user, 29, "yunieldd7@gmail.com");
+			request.setAttribute("ficha", fichaUsuario);
+			rd = request.getRequestDispatcher("Bienvenido");
 			
 		}else {
 			rd = request.getRequestDispatcher("Error");
