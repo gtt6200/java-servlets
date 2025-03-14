@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario de envio de datos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+	body{
+		font-family: Roboto;
+	}
+	.flex-container {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: normal;
+	  align-items: normal;
+	  align-content: normal;
+	}
+	
+	.flex-items {
+	  display: block;
+	  flex-grow: 0;
+	  flex-shrink: 1;
+	  flex-basis: auto;
+	  align-self: auto;
+	  order: 0;
+	}
+
+</style>
+<body>
+
+<div class="flex-container">
+	<form action="Formulario" method="post">
+		<div class="flex-items">
+			<span>Nombre: </span>
+			<input type="text" name="nombre" placeholder="Introduzca su nombre"> <br/>
+			
+		</div>
+		<div class="flex-items">
+			<span>Apellido Paterno: </span>
+			<input type="text" name="first_lastname" placeholder="Introduzca su apellido paterno"><br/>
+		</div>
+		<div class="flex-items">
+			<span>Apellido Materno: </span>
+			<input type="text" name="second_lastname" placeholder="Introduzca su materno"><br/>
+			<span>Edad: </span>
+			<input type="number" name="edad" max="110" min="18" placeholder="Introduzca su edad"><br/>
+		</div>
+		<div class="flex-items">
+			<span>Sexo: </span>
+			<input type="radio" name="sexo" value="F"> Femenino<br/>
+			<input type="radio" name="sexo" value="M"> Masculino<br/>
+			<input type="radio" name="sexo" value="B"> No Binario<br/>
+		</div>
+		<div class="flex-items">
+			<span>Tus gustos musicales</span><br/>
+			<input type="checkbox" name="musica" value="Pop">pop<br/>
+			<input type="checkbox" name="musica" value="Rock">rock<br/>
+			<input type="checkbox" name="musica" value="Regge">regge<br/>
+			<input type="checkbox" name="musica" value="clasico">clasico<br/>
+		</div>
+		<div class="flex-items">	
+			<span>Enviar datos</span>	
+			<input type="submit" value="Enviar">
+		</div>
+	
+	</form>
+</div>
+
+</body>
+</html>
